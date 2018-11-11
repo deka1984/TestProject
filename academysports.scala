@@ -9,9 +9,9 @@ class academysports extends Simulation {
 
 	val baseURL = "https://www.academy.com"
 	val Users  = 1
-  	val Duration  = 20
-  	val ThinkTime = 3
-	val RampUp = 5
+  	val Duration  = 30
+  	val ThinkTime = 2
+	val RampUp = 3
 	
 	val pdp_feed = csv("pdp.csv").random
 
