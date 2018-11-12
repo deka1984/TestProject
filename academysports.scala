@@ -7,11 +7,17 @@ import io.gatling.jdbc.Predef._
 
 class academysports extends Simulation {
 
-	val baseURL = "https://www.academy.com"
-	val Users  = 1
-  	val Duration  = 30
-  	val ThinkTime = 2
-	val RampUp = 3
+//	val baseURL = "https://www.academy.com"
+//	val Users  = 1
+// 	val Duration  = 30
+// 	val ThinkTime = 2
+//	val RampUp = 3
+	
+	val baseURL = System.getProperty("URL")
+	val Users  = System.getProperty("Users").toInt
+  	val Duration  = System.getProperty("Test_Duration").toInt
+  	val ThinkTime = System.getProperty("ThinkTime").toInt
+	val RampUp = System.getProperty("RampUp_Time").toInt
 	
 	val pdp_feed = csv("pdp.csv").random
 
